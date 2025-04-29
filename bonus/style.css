@@ -1,0 +1,13 @@
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.primary{
+    display: flex;
+    flex-direction: column;
+    background-color: aliceblue;
+    padding: 10px;
+    border-radius: 6px;
+    box-shadow: 0 0 10px;
+}
