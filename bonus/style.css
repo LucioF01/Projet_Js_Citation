@@ -1,13 +1,74 @@
-body{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+/* Centrer le cadre au milieu de l'écran */
+body {
+    margin: 0; /* Supprime les marges par défaut */
+    height: 100vh; /* Définit la hauteur à celle de la fenêtre */
+    display: flex; /* Active Flexbox pour aligner les éléments */
+    justify-content: center; /* Centre horizontalement */
+    align-items: center; /* Centre verticalement */
+    font-family: Arial, sans-serif; /* Définit une police par défaut */
+    background-color: lightblue; /* Couleur de fond de la page */
 }
-.primary{
-    display: flex;
-    flex-direction: column;
-    background-color: aliceblue;
-    padding: 10px;
-    border-radius: 6px;
-    box-shadow: 0 0 10px;
+
+/* Style pour le cadre principal */
+.primary {
+    padding: 20px; /* Ajoute de l'espace interne */
+    border: 1px solid #ccc; /* Ajoute une bordure grise */
+    border-radius: 10px; /* Arrondit les coins */
+    background-color: aliceblue; /* Couleur de fond claire */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ajoute une ombre subtile */
+    text-align: center; /* Centre le texte à l'intérieur */
+    animation: changement 1.5s ease-in-out forwards; /* Animation de transition pour le cadre */
+}
+
+/* Conteneur pour les boutons */
+.button-container {
+    display: flex; /* Active Flexbox pour les boutons */
+    justify-content: center; /* Centre les boutons horizontalement */
+    gap: 10px; /* Ajoute un espace entre les boutons */
+    margin-top: 20px; /* Ajoute un espace au-dessus du conteneur */
+}
+
+/* Style pour les boutons */
+input[type="button"] {
+    display: block; /* Transforme le bouton en élément de bloc */
+    padding: 10px 20px; /* Ajoute de l'espace interne au bouton */
+    font-size: 12px; /* Ajuste la taille du texte */
+    background-color: #fff; /* Couleur de fond par défaut */
+    animation: changement_btn 1.5s ease-in; /* Animation de transition */
+    border: solid 1px #000; /* Bordure noire */
+}
+
+/* Style des boutons au survol */
+input[type="button"]:hover {
+    background-color: lightblue; /* Change la couleur de fond au survol */
+    border: 2px solid black; /* Épaissit la bordure au survol */
+    color: black; /* Change la couleur du texte au survol */
+    transition: all 0.3s ease; /* Ajoute une transition fluide pour les changements */
+}
+
+/* Animation pour le cadre principal */
+@keyframes changement {
+    0% {
+        background-color: aliceblue; /* Couleur initiale */
+    }
+    50% {
+        background-color: black; /* Couleur intermédiaire */
+    }
+    100% {
+        background-color: aliceblue; /* Retour à la couleur initiale */
+        rotate: 360deg; /* Rotation complète */
+    }
+}
+
+/* Animation pour les boutons */
+@keyframes changement_btn {
+    0% {
+        background-color: aliceblue; /* Couleur initiale */
+    }
+    50% {
+        background-color: black; /* Couleur intermédiaire */
+    }
+    100% {
+        background-color: aliceblue; /* Retour à la couleur initiale */
+    }
 }

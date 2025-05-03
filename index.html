@@ -1,18 +1,31 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 <head>
-    <title>Ma page de Citations aléatoire</title>
-    <link rel="stylesheet" type="text/css" href="bonus/style.css">
+    <meta charset="UTF-8"> <!-- Définit l'encodage des caractères en UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Assure une mise en page responsive -->
+    <title>Ma page de Citations aléatoire</title> <!-- Titre de la page affiché dans l'onglet du navigateur -->
+    <!-- Lien vers la feuille de style CSS -->
+    <link rel="stylesheet" type="text/css" href="bonus/style.css"> <!-- Inclusion du fichier CSS pour le style -->
 </head>
 <body>
+    <!-- Conteneur principal -->
     <div class="primary">
+        <!-- Titre de la section -->
         <h2>Citation du jour :</h2>
-        <div>
-            <script src="script.js"></script>
-        </div>
-        <div>
-            <input type="button" onclick='window.location.reload(true)' value="Nouvelle citation"/>
+        
+        <!-- Section pour afficher la citation -->
+        <div id="citation"></div> <!-- L'élément où la citation sera injectée par le script JavaScript -->
+
+        <!-- Boutons pour interagir avec la page -->
+        <div class="button-container">
+            <!-- Bouton pour recharger la page et générer une nouvelle citation -->
+            <input type="button" onclick='window.location.reload(true)' value="Nouvelle citation">
+            <!-- Bouton pour copier la citation affichée dans le presse-papier -->
+            <input type="button" onclick='copierEtStocker()' value="Copier">
         </div>
     </div>
+
+    <!-- Inclusion du fichier JavaScript -->
+    <script src="script.js"></script> <!-- Charge le fichier contenant les fonctions JavaScript -->
 </body>
 </html>
